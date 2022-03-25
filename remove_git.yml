@@ -1,0 +1,10 @@
+---
+  - name: Playbook
+    hosts: servergroup
+    become: yes
+    become-user: root
+    tasks:
+      - name : Insatlling latest version of git on centos server
+        yum :
+          name: git
+          status: removed
